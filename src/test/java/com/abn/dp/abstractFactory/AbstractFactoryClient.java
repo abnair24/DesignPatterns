@@ -1,8 +1,5 @@
 package com.abn.dp.abstractFactory;
 
-import com.abn.dp.factory.abstractFactory.Chair;
-import com.abn.dp.factory.abstractFactory.FurnitureFactory;
-import com.abn.dp.factory.abstractFactory.Sofa;
 import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

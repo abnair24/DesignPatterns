@@ -1,4 +1,4 @@
-package com.abn.dp.factory.abstractFactory;
+package com.abn.dp.abstractFactory;
 
 public class ModernChair extends Chair {
 
