@@ -1,20 +1,29 @@
 package com.abn.dp.builder;
 
-public abstract class PizzaBuilder {
+public class PizzaBuilder {
 
     protected Pizza pizza;
 
-    public Pizza getPizzaBuilder(){
-        return pizza;
-    }
-
-    public void createNewPizzaProduct() {
+    public PizzaBuilder() {
         pizza = new Pizza();
     }
 
-    public abstract void buildDough();
+    public Pizza build() {
+        return pizza;
+    }
 
-    public abstract void buildSauce();
+    public PizzaBuilder withDough(String dough) {
+        pizza.setDough(dough);
+        return this;
+    }
 
-    public abstract void buildTopping();
+    public PizzaBuilder withSauce(String sauce) {
+        pizza.setSauce(sauce);
+        return this;
+    }
+
+    public PizzaBuilder withTopping(String topping) {
+        pizza.setTopping(topping);
+        return this;
+    }
 }

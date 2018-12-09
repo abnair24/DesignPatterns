@@ -9,15 +9,15 @@ public class BuilderClient {
 
     @Test
     public void test1() throws Exception {
-        Director director = new Director();
-        PizzaBuilder spicyPizzaBuilder = new SpicyPizzaBuilder();
 
-        director.setPizzaBuilder(spicyPizzaBuilder);
-        director.constructPizza();
+        Pizza spicyPizza = new PizzaBuilder()
+                .withDough("spicy dough")
+                .withSauce("spicy sauce")
+                .withTopping("spicy topping")
+                .build();
 
-        assertThat(director.getPizza().getDough()).hasToString("spicy dough");
-        assertThat(director.getPizza().getSauce()).hasToString("spicy sauce");
-        assertThat(director.getPizza().getTopping()).hasToString("spicy topping");
-
+        assertThat(spicyPizza.getDough()).hasToString("spicy dough");
+        assertThat(spicyPizza.getSauce()).hasToString("spicy sauce");
+        assertThat(spicyPizza.getTopping()).hasToString("spicy topping");
     }
 }
